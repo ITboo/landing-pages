@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee House Resource</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon-32x32.png">
+  <link rel="stylesheet" href="menu-style.css">
+  <script src="../src/burgerMenu.js" defer></script>
+</head>
+<body>  
+  <div class="wrapper">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo" href="../"><img src="../assets/header/logo.svg" alt="Coffee house logo"></a>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li><a class="nav__list-item" href="../#favorite">Favorite coffee</a></li>
+              <li><a class="nav__list-item" href="../#about">About</a></li>
+              <li><a class="nav__list-item" href="../#mobile-app">Mobile app</a></li>
+              <li><a class="nav__list-item" href="#contacts">Contact us</a></li>
+            </ul>
+            <a class="header__menu-btn" href="#">
+              <div>
+                <span>Menu</span>
+                <svg class="coffee-svg">
+                  <use href="../assets/icons/sprite.svg#icon-coffee-cup"></use>
+                </svg>
+              </div>
+            </a>
+          </nav>
+          <div class="burger">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- MAIN -->
+    <main class="main">
+      <!-- Menu -->
+      <section class="section-menu">
+        <div class="container">
+          <h1 class="section-title section-title_h2">
+            Behind each of our cups hides an <span class="section-title_accent">amazing surprise</span>
+          </h1>
+          <form class="tab__wrapper" action="/">
+            <input class="menu__input" type="radio" id="coffee" name="menu" value="coffee" checked>
+            <label class="tab" for="coffee">
+              <img class="tab__icon" src="../assets/menu/icons/coffee.svg" alt="coffee icon">
+              <span class="tab__name">Coffee</span>
+            </label>
+            <input class="menu__input" type="radio" id="tea" name="menu" value="tea">
+            <label class="tab" for="tea">
+              <img class="tab__icon" src="../assets/menu/icons/tea.svg" alt="tea icon">
+              <span class="tab__name">Tea</span>
+            </label>
+            <input class="menu__input" type="radio" id="dessert" name="menu" value="dessert">
+            <label class="tab" for="dessert">
+              <img class="tab__icon" src="../assets/menu/icons/dessert.svg" alt="dessert icon">
+              <span class="tab__name">Dessert</span>
+            </label>
+          </form>
+          <div class="menu__wrapper"></div>
+        </div>
+        <div class="button-more">
+          <svg><use href="../assets/icons/sprite.svg#icon-show-more"></use></svg>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer id="contacts" class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__socials">
+            <h2 class="section-title section-title_h2">
+              Sip, Savor, Smile. <span class="section-title_accent">It&#8217;s coffee time!</span>
+            </h2>
+            <ul class="socials">
+              <li>
+                <a class="socials__link" href="https://twitter.com/" title="twitter" target="_blank">
+                  <svg><use href="../assets/icons/sprite.svg#icon-twitter"></use></svg>
+                </a>
+              </li>
+              <li>
+                <a class="socials__link" href="https://www.instagram.com/" title="instagram" target="_blank">
+                  <svg><use href="../assets/icons/sprite.svg#icon-instagram"></use></svg>
+                </a>
+              </li>
+              <li>
+                <a class="socials__link" href="https://www.facebook.com/" title="facebook" target="_blank">
+                  <svg><use href="../assets/icons/sprite.svg#icon-facebook"></use></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__contacts">
+            <h3 class="footer__contacts-caption">Contact us</h3>
+            <ul>
+              <li>
+                <a class="contacts__link contacts__link_address" href="https://maps.app.goo.gl/pwiCdwWk4GzyHfwRA" title="Our address" target="_blank">8558 Green Rd., &nbsp;LA</a>
+              </li>
+              <li>
+                <a class="contacts__link contacts__link_phone" href="tel:+16035550123" title="Call us">+1 (603) 555-0123</a>
+              </li>
+              <li>
+                <span class="contacts__link contacts__link_schedule">Mon-Sat: 9:00 AM – 23:00 PM</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="menu-js/menu.js" type="module"></script>
+</body>
+</html>
