@@ -1,0 +1,354 @@
+@import "../src/style.css";
+
+/* ========== HEADER ========== */
+
+.header__menu-btn {
+  pointer-events: none;
+}
+
+.nav.active .header__menu-btn {
+  pointer-events: auto;
+}
+
+.header__menu-btn::after {
+  width: 100%;
+  opacity: 1;
+}
+
+/* ===== Tabs ===== */
+
+.section-menu .section-title_h2 {
+  margin: 0 auto 40px;
+  max-width: 800px;
+}
+
+.tab__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 16px;
+  margin-bottom: 40px;
+}
+
+.menu__input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px;
+  padding-right: 15px;
+  height: 46px;
+  border-radius: 100px;
+  border: 1px solid var(--color-border-light);
+  background-color: var(--color-background-body);
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+.tab__icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--color-border-light);
+  object-fit: scale-down;
+  transition: all 0.5s ease-out;
+}
+
+.tab__name {
+  margin-left: 8px;
+  letter-spacing: 0.01px;
+  color: var(--color-text-dark);
+  transition: all 0.5s ease-out;
+}
+
+.menu__input:checked + .tab {
+  border-color: var(--color-background-container);
+  background-color: var(--color-background-container);
+}
+
+.menu__input[type="radio"]:checked + .tab {
+  cursor: unset;
+  pointer-events: none;
+}
+
+.menu__input:checked + .tab .tab__icon {
+  background-color: var(--color-background-body);
+}
+
+.menu__input:checked + .tab .tab__name {
+  color: var(--color-text-light);
+}
+
+/* ===== Menu ===== */
+
+.menu__wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.menu__wrapper.faded {
+  opacity: 0.1;
+}
+
+.menu__item {
+  max-width: 310px;
+  width: 100%;
+  border: 1px solid var(--color-border-light);
+  border-radius: 40px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.menu__wrapper.mobile-version .menu__item:nth-child(n + 5) {
+  display: none;
+}
+
+.menu-item__img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -1px;
+  max-width: 310px;
+  width: 100%;
+  height: 310px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.menu-item__img {
+  transition: transform 0.5s ease-out;
+}
+
+.menu-item__content-wrapper {
+  padding: 21px 19px 18px;
+}
+
+.menu-item__title {
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.menu-item__desc {
+  margin-bottom: 12px;
+  min-height: 72px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.menu-item__price {
+  font-size: 24px;
+  line-height: 125%;
+}
+
+.button-more {
+  display: none;
+  margin: 40px auto 0;
+  padding: 18px;
+  max-width: min-content;
+  outline: 1px solid var(--color-border-dark);
+  outline-offset: -1px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+.button-more svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  stroke: var(--color-text-dark);
+}
+
+.button-more.visible {
+  display: block;
+}
+
+/* ========== MODAL ========== */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.overlay.visible {
+  visibility: visible;
+  background-color: var( --color-background-backdrop);
+  pointer-events: all;
+}
+
+.modal {
+  max-width: 800px;
+  width: 800px;
+  max-height: 90vh;
+  border-radius: 40px;
+  background-color: var(--color-background-body);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  overflow-y: auto;
+}
+
+.overlay.visible .modal {
+  opacity: 1;
+}
+
+.modal__inner {
+  display: flex;
+  gap: 20px;
+  padding: 16px;
+}
+
+.modal .menu-item__img-wrapper {
+  margin-top: 0;
+  flex-shrink: 0;
+}
+
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal__content-title .menu-item__desc {
+  margin-bottom: 0;
+  min-height: unset;
+}
+
+.order {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.order__title {
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.tab__icon_modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order__price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order__price .menu-item__title {
+  margin-bottom: 0;
+}
+
+.order__alert {
+  padding: 10px 0 13px;
+  font-size: 10px;
+  line-height: 140%;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.order__alert::before {
+  content: "";
+  float: left;
+  margin-right: 8px;
+  width: 16px;
+  height: 100%;
+  background: url("../assets/icons/info-empty.svg") top no-repeat;
+}
+
+.button_order {
+  padding: 9px;
+  max-width: 100%;
+  border: 1px solid var(--color-border-dark);
+  background-color: transparent;
+  transition: all 0.3s ease-in;
+}
+
+/* ========== MEDIA ========== */
+
+/* ===== :HOVER ===== */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .tab:hover {
+    border-color: var(--color-background-container);
+    background-color: var(--color-background-container);
+  }
+  
+  .tab:hover .tab__icon {
+    background-color: var(--color-background-body);
+  }
+  
+  .tab:hover .tab__name {
+    color: var(--color-text-light);
+  }
+
+  .menu__item:hover .menu-item__img {
+    transform: scale(0.91);
+  }
+
+  .button-more:hover {
+    border-color: var(--color-background-container);
+    background-color: var(--color-background-container);
+  }
+
+  .button-more:hover svg {
+    stroke: var(--color-text-light);
+  }
+
+  .button_order:hover {
+    border-color: var(--color-background-container);
+    background-color: var(--color-background-container);
+    color: var(--color-text-light);
+  }
+
+}
+
+/* ===== 768 px ===== */
+
+@media (max-width: 768px) {
+
+  .menu__wrapper {
+    justify-content: center;
+  }
+
+}
+
+/* ===== 576 px ===== */
+
+@media (max-width: 576px) {
+
+  .tab__wrapper {
+    column-gap: 8px;
+  }
+
+  .overlay {
+    padding: 0 19px;
+  }
+
+  .modal .menu-item__img-wrapper {
+    display: none;
+  }
+
+}
