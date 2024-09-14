@@ -1,0 +1,31 @@
+/*Basic style*/
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: $light-gray;
+}
+
+.container {
+  @include min-max(320px, 100%);
+}
+
+.wrap {
+  @include min-max(320px, 1180px);
+}
+
+p,
+a,
+button {
+  color: $gray;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
