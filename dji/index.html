@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Квадрокоптеры DJI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <header class="header js-header row jcc aic">
+      <div class="container row jcsb aic">
+        <div class="logo">
+          <a href="#">
+            <img src="img/logo.svg" alt="DJI" />
+          </a>
+        </div>
+        <div class="row jcc aic">
+          <div class="search-bar">
+            <input type="text" placeholder="Поиск" class="js-input-search" />
+            <button type="button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </div>
+          <div class="icons row jcc aic">
+            <span class="shopping-cart row jcc aic js-cart-icon js-cart-btn">
+              <!-- <span class="counter row jcc aic js-cart-current-count">1</span> -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 20">
+                <path
+                  d="M4.258 0c.45 0 .842.31.944.738l.749 2.649h15.132a.972.972 0 01.945 1.207L20.21 11.94a.973.973 0 01-.945.74H7.643a.973.973 0 01-.947-.748l.005.017L3.503 1.947H.973A.973.973 0 01.973 0h3.285zM19.84 5.334H6.497l1.895 5.398h10.113l1.335-5.398zM8.857 13.699a2.719 2.719 0 012.715 2.717 2.719 2.719 0 01-2.715 2.716 2.719 2.719 0 01-2.716-2.716 2.719 2.719 0 012.716-2.717zm0 1.491a1.225 1.225 0 100 2.45 1.225 1.225 0 000-2.45zM17.901 13.699a2.719 2.719 0 012.715 2.717 2.719 2.719 0 01-2.715 2.716 2.719 2.719 0 01-2.715-2.716 2.719 2.719 0 012.715-2.717zm0 1.491a1.225 1.225 0 100 2.45 1.225 1.225 0 000-2.45z"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main column aic jcfs">
+      <div class="overlay js-overlay js-close-cart"></div>
+      <div class="cart js-cart">
+        <span class="close js-close-modal js-close-cart"></span>
+        <div class="cart-container column aic">
+          <div
+            class="cart-empty-container column jcc aic js-cart-empty-container"
+          >
+            <div class="cart-empty">Ваша корзина пуста</div>
+            <div class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M24 3l-.743 2h-1.929l-3.474 12h-13.239l-4.615-11h16.812l-.564 2h-13.24l2.937 7h10.428l3.432-12h4.195zm-15.5 15c-.828 0-1.5.672-1.5 1.5 0 .829.672 1.5 1.5 1.5s1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm6.9-7-1.9 7c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div class="cart-order-container column js-cart-order-container">
+            <div class="cart-order row jcfs aic">Ваш заказ</div>
+            <form action="server.php" method="POST" class="column aic">
+              <ul class="cart-list column jcc aic js-cart-list">
+               
+              </ul>
+              <div class="cart-total-container row jcsb aic">
+                <h3 class="title">Итого</h3>
+                <div>
+                  <span class="total-price js-cart-total-price">14 000</span>
+                  <span class="rouble">₽</span>
+                </div>
+              </div>
+              <div class="cart-btn row jcfs">
+                <button type="submit" class="btn-order">Оформить заказ</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="container column aic">
+        <div class="filters row jcfs aic">
+          <div class="filter-series row jcfs aic js-filter-series">
+            <ul class="row jcc aic">
+              <li class="series-item js-series-item active" data-value="all">
+                Все
+              </li>
+              <li class="series-item js-series-item" data-value="Mavic">
+                Mavic
+              </li>
+              <li class="series-item js-series-item" data-value="Mini">Mini</li>
+              <li class="series-item js-series-item" data-value="Air">Air</li>
+              <li class="series-item js-series-item" data-value="Inspire">
+                Inspire
+              </li>
+            </ul>
+          </div>
+
+          <div class="filter-price-selects">
+            <select
+              class="select js-filter-price-select"
+              aria-label="Сортировка по цене"
+            >
+              <option value="default">Сортировать по цене</option>
+              <option value="asc">По возрастанию цены</option>
+              <option value="desc">По убыванию цены</option>
+            </select>
+          </div>
+
+          <div class="filter-price-inputs row jcc aic">
+            <label class="filter-price-label row jcsb aic">
+              <span class="filter-text">от</span>
+              <input
+                min="0"
+                max="2000000"
+                type="number"
+                class="filter-price-input js-filter-price-input"
+                placeholder="40000"
+              />
+              <span class="filter-text">₽</span>
+            </label>
+            <label class="filter-price-label row jcsb aic">
+              <span class="filter-text">до</span>
+              <input
+                min="0"
+                max="2000000"
+                type="number"
+                class="filter-price-input js-filter-price-input"
+                placeholder="2000000"
+              />
+              <span class="filter-text">₽</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="products-container">
+          <ul class="products list js-products-list row jcfs">
+          </ul>
+        </div>
+
+        <div class="pagination js-pagination row jcc aic hidden">
+          <button
+            type="button"
+            class="pagination-btn pagination-btn-prev row jcc aic js-pagination-btn-prev"
+          >
+            <svg
+              style="transform: rotate(180deg) scale(0.55)"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#84868E"
+                d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"
+              />
+            </svg>
+          </button>
+          <ul class="pagination-list js-pagination-list row jcc aic"></ul>
+          <button
+            type="button"
+            class="pagination-btn pagination-btn-next row jcc aic js-pagination-btn-next"
+          >
+            <svg
+              style="transform: rotate(0deg) scale(0.55)"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#84868E"
+                d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <button type="button" class="btn-show-more js-btn-show-more">
+          Показать ещё
+        </button>
+      </div>
+    </main>
+
+    <footer class="footer"></footer>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
